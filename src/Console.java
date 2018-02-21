@@ -5,7 +5,7 @@ public class Console {
 	
 	public Console(){
 		this.scanner = new Scanner(System.in);
-		System.out.println("===== Euclides v1 ======");
+		System.out.println("===== Mensagem Iniciando ======");
 		System.out.println("");
 	}
 	
