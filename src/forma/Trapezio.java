@@ -1,6 +1,6 @@
 package forma;
 
-public class Trapezio {
+public class Trapezio implements GeometriaPlana{
 	
 	private float baseMenor;
 	private float baseMaior;
@@ -17,12 +17,21 @@ public class Trapezio {
 		this.altura = altura;
 	}
 	
-	public float calcArea(){
+
+	@Override
+	public double getArea() {
 		return ((this.baseMenor + this.baseMaior) / 2) * this.altura;
 	}
-	
-	public float calcPerimetro(){
+
+	@Override
+	public double getPerimetro() {
 		return this.baseMaior + this.baseMenor + this.lado1 + this.lado2;
 	}
+
+	@Override
+	public String exibirCalculo() {
+		return  "Perimetro: " + getPerimetro()+ "\n " + "Area: " + getArea();		
+	}
+	
 	
 }

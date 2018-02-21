@@ -1,7 +1,7 @@
 package forma;
 
 
-public class Triangulo {
+public class Triangulo implements GeometriaPlana{
 	private int base;
 	private int altura;
 	private int lado1;
@@ -37,16 +37,22 @@ public class Triangulo {
 		return lado3;
 	}
 	
-	public int calcArea() {
+
+	@Override
+	public double getArea() {
 		int area = (this.base * this.altura) / 2;
 		return area;
 	}
 
-	public int calcPerim() {
+	@Override
+	public double getPerimetro() {
 		int perimetro = this.lado1 + this.lado2 + this.lado3;
 		return perimetro;
 	}
-	
 
-	
+	@Override
+	public String exibirCalculo() {
+		return  "Perimetro: " + getPerimetro()+ "\n " + "Area: " + getArea();		
+	}
+
 }

@@ -1,6 +1,6 @@
 package forma;
 
-public class Circulo {
+public class Circulo implements GeometriaPlana{
 
 	private double raio;
 
@@ -14,15 +14,19 @@ public class Circulo {
 		return this.raio;
 	}
 	
-	public double calcArea(){
+	@Override
+	public double getArea() {
 		return Math.PI * (this.raio * 2);
 	}
-	
-	public double calcPerimetro(){
+
+	@Override
+	public double getPerimetro() {
 		return (Math.PI * 2) * this.raio;
 	}
-	
 
-	
+	@Override
+	public String exibirCalculo() {
+		return  "Perimetro: " + getPerimetro()+ "\n " + "Area: " + getArea();		
+	}
 	
 }

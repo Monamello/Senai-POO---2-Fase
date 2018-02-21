@@ -1,6 +1,6 @@
 package forma;
 
-public class Retangulo {
+public class Retangulo implements GeometriaPlana{
 
 	private int altura;
 	private int base;
@@ -19,14 +19,21 @@ public class Retangulo {
 		return base;
 	}
 	
-	public int calcAreaRetangulo() {
+	@Override
+	public double getArea() {
 		int area = this.base * this.altura;
 		return area;
 	}
 
-	public int calcPerimRetangulo() {
+	@Override
+	public double getPerimetro() {
 		int perimetro = (this.base * this.altura) * 2;
 		return perimetro;
+	}
+
+	@Override
+	public String exibirCalculo() {
+		return  "Perimetro: " + getPerimetro()+ "\n " + "Area: " + getArea();		
 	}
 	
 	
