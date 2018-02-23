@@ -1,14 +1,14 @@
 package forma;
 
-public class Circulo implements GeometriaPlana{
+public class Circulo extends Forma implements GeometriaPlana{
 
 	private double raio;
 
 	
 	public Circulo(double raio) {
-		super();
+		super(TipoForma.CIRCULO);
 		this.raio = raio;
-	}
+	}				
 
 	public double getRaio() {
 		return this.raio;
