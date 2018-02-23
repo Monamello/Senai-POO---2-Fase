@@ -1,5 +1,6 @@
 import forma.Circulo;
 import forma.Retangulo;
+import forma.TipoForma;
 import forma.Trapezio;
 import forma.Triangulo;
 
@@ -17,10 +18,9 @@ public class Calculadora {
 	
 	public void init(){
 		do{
-			 String decisao = console.selecionaTipo();
-				
-				switch (decisao) {
-				case "retangulo":
+			TipoForma tipo = console.selecionaTipo(); 
+				switch (tipo) {
+				case RETANGULO:
 					
 					console.enviaMensagem(" Digite a base: ");
 					String inputBaseR = console.receberValor();
@@ -35,7 +35,7 @@ public class Calculadora {
 					console.enviaMensagem("");
 					console.enviaMensagem("Digite s para continuar");
 					break;
-				case "triangulo":
+				case TRIANGULO:
 					console.enviaMensagem(" Digite a base: ");
 					String inputBaseT = console.receberValor();
 
@@ -59,7 +59,7 @@ public class Calculadora {
 					console.enviaMensagem("");
 					console.enviaMensagem("Digite s para continuar: ");
 					break;
-				case "circulo":
+				case CIRCULO:
 					console.enviaMensagem(" Digite o raio: ");
 					String inputRaio = console.receberValor();
 					console.enviaMensagem("");
@@ -70,7 +70,7 @@ public class Calculadora {
 					console.enviaMensagem("");
 					console.enviaMensagem("Digite s para continuar: ");
 					break;
-				case "trapezio":
+				case TRAPEZIO:
 
 					console.enviaMensagem(" Digite b : ");
 					String inputb = console.receberValor();

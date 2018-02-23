@@ -1,34 +1,52 @@
 import java.util.Scanner;
 
+import forma.TipoForma;
+
 public class Console {
 	private Scanner scanner;
-	
-	public Console(){
+
+	public Console() {
 		this.scanner = new Scanner(System.in);
 		System.out.println(Messages.getString("Console.titulo")); //$NON-NLS-1$
 		System.out.println(Messages.getString("Console.1")); //$NON-NLS-1$
 	}
-	
-	public String selecionaTipo(){
+
+	public TipoForma selecionaTipo(){
 		System.out.println(Messages.getString("Console.tipoForma")); //$NON-NLS-1$
 		String inputPergunta = scanner.nextLine();
-		return inputPergunta;
+		
+		
+		switch (inputPergunta) {
+			case "retangulo":
+				return TipoForma.RETANGULO;
+			case "trapezio":
+				return TipoForma.TRAPEZIO;
+			case "circulo":
+				return TipoForma.CIRCULO;
+			case "triangulo":
+				return TipoForma.TRIANGULO;
+			default:
+				return null;
+		}
+				
+				
 	}
-	
-	public boolean confirmaSN(String mensagem){
+
+	public boolean confirmaSN(String mensagem) {
 		System.out.println(mensagem);
 		return scanner.nextLine().equalsIgnoreCase(Messages.getString("Console.3")); //$NON-NLS-1$
 	}
-	
-	public void enviaMensagem(String mensagem){
+
+	public void enviaMensagem(String mensagem) {
 		System.out.println(mensagem);
 	}
-	
-	public void close(){
+
+	public void close() {
 		this.scanner.close();
-		System.out.println(Messages.getString("Console.fim"));  //$NON-NLS-1$
+		System.out.println(Messages.getString("Console.fim")); //$NON-NLS-1$
 	}
-	public String receberValor(){
+
+	public String receberValor() {
 		return scanner.nextLine();
 	}
 }
