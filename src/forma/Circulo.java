@@ -1,10 +1,16 @@
 package forma;
 
+import java.util.Map;
+
 public class Circulo extends Forma implements GeometriaPlana{
 
 	private double raio;
-
+	private enum Parametro {RAIO}
 	
+	public Circulo() {
+		super(TipoForma.CIRCULO);
+	}				
+
 	public Circulo(double raio) {
 		super(TipoForma.CIRCULO);
 		this.raio = raio;
@@ -27,6 +33,17 @@ public class Circulo extends Forma implements GeometriaPlana{
 	@Override
 	public String exibirCalculo() {
 		return  "Perimetro: " + getPerimetro()+ "\n " + "Area: " + getArea();		
+	}
+
+	@Override
+	public String[] getParametros() {
+		String[] parametro = {Parametro.RAIO.name()};
+		return parametro;
+	}
+
+	@Override
+	public void setParametros(Map<String, Double> args) {
+		this.raio = args.get(Parametro.RAIO.name());
 	}
 	
 }
