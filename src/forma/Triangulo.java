@@ -86,4 +86,11 @@ public class Triangulo extends Forma implements GeometriaPlana {
 
 	}
 
+	@Override
+	public String toString() {
+		return "Triangulo [base=" + base + ", altura=" + altura + ", lado1=" + lado1 + ", lado2=" + lado2 + ", lado3="
+				+ lado3 + "]";
+	}
+	
+
 }

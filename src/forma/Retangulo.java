@@ -55,6 +55,13 @@ public class Retangulo extends Forma implements GeometriaPlana{
 		this.altura = args.get(Parametro.ALTURA.name());
 		
 	}
+
+	@Override
+	public String toString() {
+		return "Retangulo [altura=" + altura + ", base=" + base + "]";
+	}
+	
+	
 	
 	
 	

@@ -63,4 +63,11 @@ public class Trapezio extends Forma implements GeometriaPlana {
 		this.lado2 = args.get(Parametro.LADO2.name());
 	}
 
+	@Override
+	public String toString() {
+		return "Trapezio [baseMenor=" + baseMenor + ", baseMaior=" + baseMaior + ", lado1=" + lado1 + ", lado2=" + lado2
+				+ ", altura=" + altura + "]";
+	}
+	
+	
 }

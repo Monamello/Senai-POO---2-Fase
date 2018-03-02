@@ -16,6 +16,10 @@ public abstract class Forma {
 	
 	public abstract String[] getParametros();
 	public abstract void setParametros(Map<String, Double> args);
+	
+	public void gerarExcecao() throws Exception {
+		throw new Exception("TESTE");
+	}
 }
 
 

@@ -45,5 +45,12 @@ public class Circulo extends Forma implements GeometriaPlana{
 	public void setParametros(Map<String, Double> args) {
 		this.raio = args.get(Parametro.RAIO.name());
 	}
+
+	@Override
+	public String toString() {
+		return "Circulo [raio=" + raio + "]";
+	}
+	
+	
 	
 }
